@@ -41,7 +41,7 @@ async function main() {
   const code = info["IDEs"]["VSCode"] && info["IDEs"]["VSCode"]["path"];
   if (code) {
     await run(
-      `${code} --install-extension zixuanchen.vitest-explorer --pre-release --force`
+      `"${code}" --install-extension zixuanchen.vitest-explorer --pre-release --force`
     );
   } else {
     throw new Error("VS Code not found");
